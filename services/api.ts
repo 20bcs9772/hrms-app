@@ -2,7 +2,7 @@
 import axios from 'axios';
 import { Employee, CreateEmployeeData, AttendanceRecord, MarkAttendanceData } from '../types';
 
-const API_BASE_URL = process.env.API_URL || 'http://localhost:8000';
+const API_BASE_URL = process.env.API_URL || 'https://hrms-api-6qee.onrender.com';
 
 const apiClient = axios.create({
   baseURL: API_BASE_URL,
