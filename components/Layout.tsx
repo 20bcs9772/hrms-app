@@ -77,14 +77,6 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         </nav>
 
         <div className="pt-6 border-t border-zinc-800 space-y-2">
-          <button 
-            type="button" 
-            onClick={() => alert('Settings panel coming soon!')}
-            className="flex items-center gap-3 px-4 py-3 w-full text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800 rounded-xl transition-colors"
-          >
-            <Settings className="w-5 h-5" />
-            <span>Settings</span>
-          </button>
           <Link to="/" className="flex items-center gap-3 px-4 py-3 w-full text-zinc-400 hover:text-red-400 hover:bg-red-500/10 rounded-xl transition-colors">
             <LogOut className="w-5 h-5" />
             <span>Exit Dashboard</span>

@@ -39,9 +39,7 @@ const Dashboard: React.FC = () => {
 
   const stats = [
     { label: 'Total Employees', value: employees.length, icon: <Users className="w-6 h-6" />, color: 'blue' },
-    { label: 'Present Today', value: '-', icon: <CalendarCheck className="w-6 h-6" />, color: 'emerald' }, // Note: Backend doesn't have a direct "present today total" endpoint yet
     { label: 'Departments', value: deptCount, icon: <Building2 className="w-6 h-6" />, color: 'purple' },
-    { label: 'Growth Rate', value: 'Live', icon: <TrendingUp className="w-6 h-6" />, color: 'amber' },
   ];
 
   if (loading) {
@@ -87,7 +85,7 @@ const Dashboard: React.FC = () => {
         ))}
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-1 gap-8">
         <div className="lg:col-span-2 glass rounded-2xl p-6">
           <div className="flex items-center justify-between mb-6">
             <h3 className="text-lg font-bold">Recent Hires</h3>
@@ -112,26 +110,6 @@ const Dashboard: React.FC = () => {
                 </div>
               ))
             )}
-          </div>
-        </div>
-
-        <div className="glass rounded-2xl p-6">
-          <h3 className="text-lg font-bold mb-6">Attendance Quick Links</h3>
-          <div className="space-y-4">
-            <Link to="/attendance" className="block p-4 bg-zinc-900/50 rounded-xl border border-zinc-800/50 hover:bg-zinc-800 transition-colors group">
-              <div className="flex items-center justify-between mb-1">
-                <span className="font-semibold">Mark Attendance</span>
-                <ArrowRight className="w-4 h-4 text-zinc-600 group-hover:text-blue-500 transition-colors" />
-              </div>
-              <p className="text-xs text-zinc-500">Track daily presence for all employees.</p>
-            </Link>
-            
-            <div className="p-4 bg-blue-500/5 rounded-xl border border-blue-500/10 text-sm">
-               <div className="text-blue-400 mb-2 font-medium">System Health</div>
-               <p className="text-zinc-500 leading-relaxed text-xs">
-                 The HRMS backend is currently live and processing requests. Ensure your local server is running on port 8000.
-               </p>
-            </div>
           </div>
         </div>
       </div>

@@ -209,13 +209,6 @@ const Attendance: React.FC = () => {
           </div>
         </div>
       )}
-
-      <div className="p-6 bg-blue-500/5 rounded-3xl border border-blue-500/10 flex items-center gap-4">
-        <AlertCircle className="w-6 h-6 text-blue-500 flex-shrink-0" />
-        <p className="text-sm text-zinc-400">
-          <strong>Note:</strong> Multiple marks for the same employee on the same date will result in a 409 conflict error from the backend.
-        </p>
-      </div>
     </div>
   );
 };
